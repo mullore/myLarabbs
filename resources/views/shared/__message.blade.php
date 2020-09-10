@@ -7,4 +7,4 @@
         </div>
     @endif
 
-@endforeach~
+@endforeach
