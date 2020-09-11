@@ -14,6 +14,7 @@
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 
+//header
 body{
     font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
     font-size: 14px;
@@ -27,6 +28,7 @@ body{
     margin-bottom: 40px;
     margin-top: 0;
 }
+
 //footer
 html{
     position: relative;
@@ -53,3 +55,17 @@ body{
         }
     }
 }
+.navbar-pad_bt0 {
+    padding: 0 0 ;
+}
+
+/*注册页面*/
+.register-page{
+    img.captcha{
+        cursor: pointer;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        padding: 3px;
+    }
+}
+

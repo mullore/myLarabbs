@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top navbar-pad_bt0" >
     <div class="container">
         {{--LOGO--}}
         <a class="navbar-brand" href="{{ url('/') }}">
@@ -20,8 +20,8 @@
             <ul class="navbar-nav navbar-right">
                 @if (Auth::check())
                     {{--PC--}}
-                    <li class="d-none d-lg-block nav-item dropdown">
-                        <a  class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                    <li class="d-none d-lg-block nav-item dropdown ">
+                        <a  class="nav-link dropdown-toggle"  href="#" data-toggle="dropdown">
                             <img src="/uploads/images/avatars/default.jpeg"  class="img-fluid rounded-circle"
                                  width="40px" height="40px" alt="个人头像">
                             {{ Auth::user()->name }}

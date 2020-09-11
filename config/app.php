@@ -133,6 +133,12 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
+    /**
+     *  设置日期日志
+     */
+    'log_level' => env('APP_LOG_LEVEL', 'error'),
+    'log' => 'daily',
+    'log_max_files' => 30,
 
     'providers' => [
 
