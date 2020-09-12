@@ -1,3 +1,7 @@
 {
-    "E-Mail Address": "邮箱"
+    "E-Mail Address": "邮箱",
+    "A fresh verification link has been sent to your email address.": "一个新的验证链接已经发送到您的电子邮件地址",
+    "Before proceeding, please check your email for a verification link.": "在继续之前，请检查您的电子邮件验证链接。",
+    "If you did not receive the email": "如果您没有收到邮件",
+    "click here to request another": "点击这里请求另一个"
 }
