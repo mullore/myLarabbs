@@ -1,4 +1,4 @@
-<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top navbar-pad_bt0" >
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top " >
     <div class="container">
         {{--LOGO--}}
         <a class="navbar-brand" href="{{ url('/') }}">
@@ -18,17 +18,17 @@
             </ul>
             {{--Right--}}
             <ul class="navbar-nav navbar-right">
-                @if (Auth::check())
+                @auth
                     {{--PC--}}
                     <li class="d-none d-lg-block nav-item dropdown ">
-                        <a  class="nav-link dropdown-toggle"  href="#" data-toggle="dropdown">
-                            <img src="/uploads/images/avatars/default.jpeg"  class="img-fluid rounded-circle"
+                        <a  class="nav-link dropdown-toggle pad_bt0"  href="#" data-toggle="dropdown">
+                            <img src="/uploads/images/avatars/default.jpeg"  class="img-fluid rounded-circle "
                                  width="40px" height="40px" alt="个人头像">
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" >
-                            <a class="dropdown-item" href="">个人中心</a>
-                            <a class="dropdown-item" href="">编辑资料</a>
+                            <a class="dropdown-item" href="{{ route('users.show',Auth::id()) }}">个人中心</a>
+                            <a class="dropdown-item" href="{{ route('users.edit',Auth::id()) }}">编辑资料</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">
                                 <form action="{{ route('logout') }}" method="post" >
@@ -53,9 +53,9 @@
 
 
                 @else
-                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a> </li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a> </li>
-                @endif
+                    <li class="nav-item text-center"><a class="nav-link" href="{{ route('login') }}">登录</a> </li>
+                    <li class="nav-item text-center"><a class="nav-link" href="{{ route('register') }}">注册</a> </li>
+                @endauth
 
             </ul>
         </div>
