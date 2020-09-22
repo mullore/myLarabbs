@@ -12,9 +12,11 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('users.update',$user->id) }}" method="post" accept-charset="utf-8">
+                    <form action="{{ route('users.update',$user->id) }}" method="post"
+                          accept-charset="utf-8" enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
+                        {{--错误提示--}}
                         @include('shared.__error')
                         {{--用户名--}}
                         <div class="form-group">
@@ -33,6 +35,15 @@
                             <label >简介</label>
                             <textarea class="form-control" name="introduction" id="introduction"
                                       rows="3">{{old('introduction',$user->introduction)}}</textarea>
+                        </div>
+                        {{--头像--}}
+                        <div class="form-group">
+                            <label>头像</label>
+                            <input class="form-control-file" type="file" name="avatar">
+                            @if ($user->avatar)
+                                <br>
+                                <img src="{{ $user->avatar }}" class="img-thumbnail" width="200">
+                            @endif
                         </div>
                         {{--按钮--}}
                         <div >

@@ -6,13 +6,19 @@
     <div class="row">
         <div class="col-lg-3 col-md-3 d-none d-lg-block user-info">
             <div class="card">
-                <img class="card-img-top" src="/uploads/images/avatars/default.jpeg">
+                @if ($user->avatar)
+                    <img class="card-img-top" src="{{$user->avatar}}"  >
+                @else
+                    <img class="card-img-top" src="/uploads/images/avatars/default.jpeg">
+                @endif
                 <div class="card-body">
                     <h5><strong>个人简介</strong></h5>
                     <p class="text-muted">{{$user->introduction ? $user->introduction : '简介为空'}}</p>
                     <hr>
                     <h5><strong>注册于</strong></h5>
-                    <p class="text-muted">{{ $user->updated_at ? $user->updated_at:'暂无法获取' }}</p>
+                    <p class="text-muted">
+                        {{ $user->updated_at ? $user->updated_at->diffForHumans():'暂无法获取' }}
+                    </p>
                 </div>
             </div>
         </div>
