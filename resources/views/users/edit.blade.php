@@ -39,11 +39,20 @@
                         {{--头像--}}
                         <div class="form-group">
                             <label>头像</label>
-                            <input class="form-control-file" type="file" name="avatar">
-                            @if ($user->avatar)
-                                <br>
-                                <img src="{{ $user->avatar }}" class="img-thumbnail" width="200">
-                            @endif
+                            <input id="avatar" class="form-control-file mb-4" type="file" name="avatar" onchange="preview()">
+                            <div class="d-inline-flex">
+                                <div class="col-md-4">
+                                    <div class="card-title">更新后预览：</div>
+                                    <img id="preview_img"  class="img-thumbnail" src="{{ $user->avatar }}"
+                                         class="img-thumbnail" width="200" height="200">
+                                </div>
+                                @if ($user->avatar)
+                                    <div class="col-md-4">
+                                        <div class="card-title">更新前预览：</div>
+                                        <img src="{{ $user->avatar }}" class="img-thumbnail" width="200">
+                                    </div>
+                                @endif
+                            </div>
                         </div>
                         {{--按钮--}}
                         <div >
@@ -55,3 +64,13 @@
         </div>
     </div>
 @endsection
+<script>
+    function preview () {
+        const reader = new FileReader();
+        let upload_image = document.getElementById('avatar').files[0];
+        reader.readAsDataURL(upload_image);
+        reader.onload = function (e) {
+            document.getElementById('preview_img').src = this.result;
+        }
+    }
+</script>

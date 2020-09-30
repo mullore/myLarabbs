@@ -18,17 +18,15 @@
             </ul>
             {{--Right--}}
             <ul class="navbar-nav navbar-right">
+                {{--登录后--}}
                 @auth
                     {{--PC--}}
                     <li class="d-none d-lg-block nav-item dropdown ">
                         <a  class="nav-link dropdown-toggle pad_bt0"  href="#" data-toggle="dropdown">
-                            @if (Auth::user()->avatar)
-                                <img src="{{ Auth::user()->avatar }}"  class=" rounded-circle "
-                                     width="40px" height="40px" alt="个人头像">
-                            @else
-                                <img src="/uploads/images/avatars/default.jpeg"  class="img-fluid rounded-circle "
-                                     width="40px" height="40px" alt="个人头像">
-                            @endif
+                            <img src="{{ Auth::user()->avatar   }}"
+                                 class=" rounded-circle "
+                                 width="35px" height="35px" alt="个人头像">
+
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" >
@@ -56,7 +54,7 @@
                         </a>
                     </li>
 
-
+                {{--登录前--}}
                 @else
                     <li class="nav-item text-center"><a class="nav-link" href="{{ route('login') }}">登录</a> </li>
                     <li class="nav-item text-center"><a class="nav-link" href="{{ route('register') }}">注册</a> </li>
@@ -66,3 +64,4 @@
         </div>
     </div>
 </nav>
+
