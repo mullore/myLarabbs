@@ -22,19 +22,37 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-9 col-md-9">
+        <div class="col-lg-9 col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <h1 class="mb-0" style="font-size: 22px">
+                    <h1 class="mb-0 " style="font-size: 22px">
                         {{$user->name}}
-                        <small class="text-muted">{{$user->email}}</small></h1>
+                        <small class="text-muted" style="font-size: 12px" >{{$user->email}}</small>
+                    </h1>
+
+
                 </div>
             </div>
             <hr>
             {{--用户发布内容--}}
             <div class="card">
                 <div class="card-body">
-                    暂无数据 ~_~
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link  bg-transparent {{active_class(if_query('tab',null))}}"
+                               href="{{route('users.show',$user->id)}}">Ta 的话题</a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ active_class(if_query('tab','reply')) }}"
+                               href="{{route('users.show',[$user->id,'tab'=>'reply'])}}">Ta 的回复</a></li>
+                    </ul>
+                    @if (if_query('tab','reply'))
+                    @include('users._replies',['replies' => $user->reply()->recent()->paginate(5)])
+                    @else
+                    @include('users._topics',['topics' => $user->topic()->recent()->paginate(5)])
+                    @endif
+
+
+
                 </div>
             </div>
 

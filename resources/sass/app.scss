@@ -28,7 +28,12 @@ body{
     margin-bottom: 40px;
     margin-top: 0;
 }
-
+//导航头像
+.avatar{
+    width: 40px;
+    height: 40px;
+    object-fit:cover;
+}
 //footer
 html{
     position: relative;
@@ -70,3 +75,82 @@ body{
     }
 }
 
+/*话题页面*/
+//.topic-index-page{
+//    .topic-list{
+//        .nav>li>a{
+//            //position: relative;
+//            //display: block;
+//            //padding: 5px 14px;
+//            //font-size: 0.9em;
+//        }
+//        a{
+//            color: #444444;
+//        }
+//        .meta{
+//            font-size: 0.9em;
+//            color: #b3b3b3;
+//            a{
+//                color: #b3b3b3;
+//            }
+//        }
+//
+//        hr{
+//            margin-top: 12px;
+//            margin-bottom: 12px;
+//            border: 0;
+//            border-top: 1px solid #dcebf5;
+//        }
+//    }
+//}
+/**/
+#app>div.container {
+    margin-bottom: 100px;
+}
+
+/*simditor*/
+.simditor-body img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+@import "topic_body";
+
+
+.topics-show-page {
+
+    .card {
+        padding: 15px;
+
+        h1 {
+            margin: 0.4em auto 0.6em;
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
+}
+
+.reply-list_label{
+    font-size:12px;
+    cursor: pointer;
+    span{
+        color: #b3b3b3;
+    }
+    a{
+        color: #b3b3b3;
+    }
+}
+.style-dashed {
+    border-style: dashed;
+}
+.object-fit_cover{
+    object-fit: cover;
+}
+
+//超行省略号
+.topic-title{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}

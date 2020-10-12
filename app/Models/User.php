@@ -9,7 +9,32 @@ use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 
 class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use Notifiable,MustVerifyEmailTrait;
+    use MustVerifyEmailTrait;
+
+    use  Notifiable{
+        notify as protected laravelNotify;
+    }
+
+    public function notify($instance)
+    {
+        //如果要通知的人是当前用户,就不用通知
+        // if ( $this->id === \Auth::id()){
+        //     return;
+        // }
+
+        // if (method_exists($instance,'database')){
+            $this->increment('notification_count');
+        // }
+
+        $this->laravelNotify($instance);
+
+    }
+
+    public function marKAsRead(){
+        $this->notification_count = 0;
+        $this->save();
+        $this->unreadNotifications->markAsRead();
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -39,6 +64,18 @@ class User extends Authenticatable implements MustVerifyEmailContract
         'created_at' => 'datetime:Y-m-d H:i:s',
         'updated_at' => 'datetime:Y-m-d H:i:s',
     ];
+
+    public function topic(){
+        return $this->hasMany(Topic::class);
+    }
+
+    public function reply(){
+
+        return $this->hasMany(Reply::class);
+    }
+    public function isAuthorOf($model){
+       return $this->id == $model->user_id;
+    }
 
 
 }

@@ -64,13 +64,16 @@
         </div>
     </div>
 @endsection
-<script>
-    function preview () {
-        const reader = new FileReader();
-        let upload_image = document.getElementById('avatar').files[0];
-        reader.readAsDataURL(upload_image);
-        reader.onload = function (e) {
-            document.getElementById('preview_img').src = this.result;
+
+@section('scripts')
+    <script>
+        function preview () {
+            const reader = new FileReader();
+            let upload_image = document.getElementById('avatar').files[0];
+            reader.readAsDataURL(upload_image);
+            reader.onload = function (e) {
+                document.getElementById('preview_img').src = this.result;
+            }
         }
-    }
-</script>
+    </script>
+@stop

@@ -16,12 +16,12 @@ use Illuminate\Support\Str;
 |
 */
 $avatars= [
-    'https://cdn.learnku.com/uploads/images/201710/14/1/s5ehp11z6s.png',
-    'https://cdn.learnku.com/uploads/images/201710/14/1/Lhd1SHqu86.png',
-    'https://cdn.learnku.com/uploads/images/201710/14/1/LOnMrqbHJn.png',
-    'https://cdn.learnku.com/uploads/images/201710/14/1/xAuDMxteQy.png',
-    'https://cdn.learnku.com/uploads/images/201710/14/1/ZqM7iaP4CR.png',
-    'https://cdn.learnku.com/uploads/images/201710/14/1/NDnzMutoxX.png',
+    'https://mullore.oss-cn-beijing.aliyuncs.com/20190422140657_jdQYJ.jpeg',
+    'https://mullore.oss-cn-beijing.aliyuncs.com/20200510054256_uweyg.jpg',
+    'https://mullore.oss-cn-beijing.aliyuncs.com/3e2d41ec2e738bd4868a505fb68b87d6267ff954.jpg',
+    'https://mullore.oss-cn-beijing.aliyuncs.com/20181231085130_jphdb.jpg',
+    'https://mullore.oss-cn-beijing.aliyuncs.com/e51bc7bf6c81800a64b65ebcbf3533fa838b47f0.jpg',
+    // 'https://cdn.learnku.com/uploads/images/201710/14/1/NDnzMutoxX.png',
 ];
 
 $factory->define(User::class, function (Faker $faker) use ($avatars) {
