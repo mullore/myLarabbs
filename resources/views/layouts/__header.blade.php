@@ -1,7 +1,7 @@
 <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top " >
     <div class="container">
         {{--LOGO--}}
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" href="{{ route('home.index') }}">
             Re0
         </a>
         {{--隐藏按钮--}}

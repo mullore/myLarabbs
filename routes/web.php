@@ -15,7 +15,9 @@
 
 Auth::routes(['verify'=>true]);
 
-Route::get('/', 'TopicsController@index')->name('home')->middleware('verified');
+Route::resource('home','HomeController',[ 'only' => ['index']]);
+// Route::get('/', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/', 'HomeController@index')->name('home');
 Route::resource('users','UsersController',['only'=>['show','update','edit']]);
 
 

@@ -1,0 +1,110 @@
+.home-bg{
+    position: fixed;
+    background: url("public/uploads/images/background/wallhaven-695843.jpg")  no-repeat   ;
+    background-position: 52% 30%!important;
+    background-size: cover ;
+    z-index: -1;
+
+}
+.hone-nav{
+
+    .nav-link{
+        text-shadow: 0 0 3px white;
+        cursor: pointer;
+    }
+}
+.home-body{
+    /*时间*/
+    h1{
+        text-shadow: 0 0 5px #FF4500;
+    }
+    //搜索表单
+    form{
+
+        //输入框
+        input[type=text]{
+            border: 0;
+            background-color: rgba(255,255,255,0.5)!important;
+            backdrop-filter: blur(2px);
+            box-shadow: rgba(0,0,0,.2) 0 0 10px;
+            font-weight: 400;
+            box-sizing: border-box;
+
+        }
+        //输入框 placeholder 样式
+        input::placeholder {
+            font-family: SansSerif;
+            //letter-spacing: 1px;
+            color: #ffffff !important;
+        }
+        //选中样式
+        input:focus{
+            border: 1px solid #c8a732;
+            background-color: rgba(255,255,255,1)!important;
+            box-shadow: 0 0 5px #FF4500;
+            filter: blur(0);
+        }
+        .search-button{
+            color: yellowgreen;
+            right: 0;
+            z-index: 99;
+        }
+
+        button:hover, button:focus,button:visited,button:active{
+            color: yellow!important;
+            text-shadow: 0 0 5px #FF4500!important;
+            box-shadow: 0 0 0 !important;
+        }
+
+
+    }
+    //导航
+    .nav{
+        .nav-item{
+            a{
+                background-color: rgba(255,255,255,0.4)!important;
+                height: 30px;line-height: 30px;
+
+            }
+            a:focus{
+                border: 1px solid #c8a732!important;
+                box-shadow: 0 0 5px #FF4500!important;
+            }
+            a:hover{
+                border: 1px solid yellowgreen!important;
+                box-shadow: 0 0 5px yellowgreen;
+            }
+            a:visited{
+                border: 1px solid #c8a732!important;
+                box-shadow: 0 0 5px #FF4500!important;
+            }
+            a:active{
+                border: 1px solid #c8a732!important;
+                box-shadow: 0 0 5px #FF4500!important;
+            }
+
+        }
+        //
+        .active{
+
+                border: 1px solid #c8a732!important;
+                box-shadow: 0 0 5px #FF4500;
+
+        }
+    }
+
+}
+.home-footer
+{
+    font-size: 12px;
+
+    text-shadow: 0 0 2px white;
+
+}
+.filter-blur
+{
+    filter: blur(3px);
+}
+.h-100vh{
+    height: 100vh;
+}

@@ -16999,6 +16999,120 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+/*首页导航*/
+
+.home-bg {
+  position: fixed;
+  background: url(/images/wallhaven-695843.jpg?023301cf044dedad67afd0678da6ac5d) no-repeat;
+  background-position: 52% 30% !important;
+  background-size: cover;
+  z-index: -1;
+}
+
+.hone-nav .nav-link {
+  text-shadow: 0 0 3px white;
+  cursor: pointer;
+}
+
+.home-body {
+  /*时间*/
+}
+
+.home-body h1 {
+  text-shadow: 0 0 5px #FF4500;
+}
+
+.home-body form input[type=text] {
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.home-body form input::-moz-placeholder {
+  font-family: SansSerif;
+  color: #ffffff !important;
+}
+
+.home-body form input:-ms-input-placeholder {
+  font-family: SansSerif;
+  color: #ffffff !important;
+}
+
+.home-body form input::placeholder {
+  font-family: SansSerif;
+  color: #ffffff !important;
+}
+
+.home-body form input:focus {
+  border: 1px solid #c8a732;
+  background-color: white !important;
+  box-shadow: 0 0 5px #FF4500;
+  filter: blur(0);
+}
+
+.home-body form .search-button {
+  color: yellowgreen;
+  right: 0;
+  z-index: 99;
+}
+
+.home-body form button:hover,
+.home-body form button:focus,
+.home-body form button:visited,
+.home-body form button:active {
+  color: yellow !important;
+  text-shadow: 0 0 5px #FF4500 !important;
+  box-shadow: 0 0 0 !important;
+}
+
+.home-body .nav .nav-item a {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  height: 30px;
+  line-height: 30px;
+}
+
+.home-body .nav .nav-item a:focus {
+  border: 1px solid #c8a732 !important;
+  box-shadow: 0 0 5px #FF4500 !important;
+}
+
+.home-body .nav .nav-item a:hover {
+  border: 1px solid yellowgreen !important;
+  box-shadow: 0 0 5px yellowgreen;
+}
+
+.home-body .nav .nav-item a:visited {
+  border: 1px solid #c8a732 !important;
+  box-shadow: 0 0 5px #FF4500 !important;
+}
+
+.home-body .nav .nav-item a:active {
+  border: 1px solid #c8a732 !important;
+  box-shadow: 0 0 5px #FF4500 !important;
+}
+
+.home-body .nav .active {
+  border: 1px solid #c8a732 !important;
+  box-shadow: 0 0 5px #FF4500;
+}
+
+.home-footer {
+  font-size: 12px;
+  text-shadow: 0 0 2px white;
+}
+
+.filter-blur {
+  filter: blur(3px);
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
 body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;
@@ -17026,30 +17140,12 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
-
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   background-color: #000;
-}
-
-.footer .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.footer .container p {
-  margin: 19px 0;
-  color: #c1c1c1;
-}
-
-.footer .container p a {
-  color: inherit;
 }
 
 .pad_bt0 {
@@ -17081,6 +17177,8 @@ body {
   height: auto;
   max-width: 100%;
 }
+
+/*话题样式*/
 
 .simditor-body,
 .topic-body {
