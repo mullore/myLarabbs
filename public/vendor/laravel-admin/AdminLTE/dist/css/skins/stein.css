@@ -1,0 +1,11 @@
+/*larave-admin*/
+
+.stein-color{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 0 0 10px #FF4500;
+}
+.stein-form{
+    background-color: rgba( 255,255,255,0.5) !important;
+}
