@@ -57,8 +57,8 @@ return [
     |
     */
     'route' => [
-
-        'prefix' => env('ADMIN_ROUTE_PREFIX', 'key'),
+        //后台跳转
+        'prefix' => env('ADMIN_ROUTE_PREFIX', 'time'),
 
         'namespace' => 'App\\Admin\\Controllers',
 

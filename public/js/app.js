@@ -37266,6 +37266,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./home */ "./resources/js/home.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37323,6 +37325,40 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/home.js":
+/*!******************************!*\
+  !*** ./resources/js/home.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function checkTime(i) {
+  if (i < 10) {
+    i = '0' + i;
+  }
+
+  return i;
+}
+
+function nowTime() {
+  var d = new Date(); // var t = d.toLocaleString('chinese', { hour12: false });
+
+  var h = checkTime(d.getHours());
+  var m = checkTime(d.getMinutes());
+  var s = checkTime(d.getSeconds());
+  var time = h + ':' + m + ':' + s;
+  document.getElementById('myTime').innerHTML = time;
+}
+
+var myTime = setInterval(function () {
+  nowTime();
+}, 1000);
+/* harmony default export */ __webpack_exports__["default"] = (myTime);
 
 /***/ }),
 

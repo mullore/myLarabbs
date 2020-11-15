@@ -1,11 +1,11 @@
-.home-bg{
-    position: fixed;
+.home{
+    position: relative;
     background: url("public/uploads/images/background/wallhaven-695843.jpg")  no-repeat   ;
     background-position: 52% 30%!important;
     background-size: cover ;
-    z-index: -1;
-
+    margin-bottom: 0!important;
 }
+
 .hone-nav{
 
     .nav-link{
@@ -96,8 +96,10 @@
 }
 .home-footer
 {
-    font-size: 12px;
+    //position: absolute;
 
+    bottom: 0;
+    font-size: 12px;
     text-shadow: 0 0 2px white;
 
 }

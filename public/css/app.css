@@ -17001,12 +17001,12 @@ readers do not read off random characters that represent icons */
 
 /*首页导航*/
 
-.home-bg {
-  position: fixed;
+.home {
+  position: relative;
   background: url(/images/wallhaven-695843.jpg?023301cf044dedad67afd0678da6ac5d) no-repeat;
   background-position: 52% 30% !important;
   background-size: cover;
-  z-index: -1;
+  margin-bottom: 0 !important;
 }
 
 .hone-nav .nav-link {
@@ -17101,6 +17101,7 @@ readers do not read off random characters that represent icons */
 }
 
 .home-footer {
+  bottom: 0;
   font-size: 12px;
   text-shadow: 0 0 2px white;
 }
