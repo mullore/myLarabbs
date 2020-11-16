@@ -5,7 +5,7 @@
 
 @section('content')
 
-<div class="row ">
+<div class="  row ">
     {{--左侧信息栏--}}
     <div class="col-lg-3 col-md-3 d-none d-lg-block d-md-block ">
 

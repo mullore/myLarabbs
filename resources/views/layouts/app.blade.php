@@ -9,24 +9,20 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         {{--title--}}
         <title>@yield('title','Re0')</title>
+        <link rel="shortcut icon" href="{{asset('uploads/images/favicon.ico')}}">
         {{-- style--}}
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         @yield('styles')
     </head>
-    <body>
-        <div id="app" >
+    <body class="@yield('bg' )">
 
+        <div id="app"  >
             @include('layouts.__header')
-
-            <div class="container">
-
+            <div class="container ">
                 @include('shared.__message')
-
                 @yield('content')
-
             </div>
             @include('layouts.__footer')
-
         </div>
     </body>
     <script src="{{mix('js/app.js')}}"></script>

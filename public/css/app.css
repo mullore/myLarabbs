@@ -17101,9 +17101,9 @@ readers do not read off random characters that represent icons */
 }
 
 .home-footer {
+  position: absolute;
   bottom: 0;
   font-size: 12px;
-  text-shadow: 0 0 2px white;
 }
 
 .filter-blur {
@@ -17143,8 +17143,8 @@ html {
 
 .footer {
   position: absolute;
+  left: 0;
   bottom: 0;
-  width: 100%;
   min-height: 60px;
   background-color: #000;
 }
@@ -17667,5 +17667,39 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.bg-login {
+  background: url(/images/Goodgirl.jpg?7d4a7251ae9e919c36e4c50718ea9318) no-repeat;
+  background-position: 52% 30% !important;
+  background-size: cover;
+}
+
+.login-nav {
+  border-bottom: 0;
+}
+
+.opacity-card {
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.bg-register {
+  background: url(/images/summer.jpg?1c14d5734016d8bfea115531f94b0227) no-repeat;
+  background-position: 15% 30% !important;
+  background-size: cover;
+}
+
+.register-nav {
+  border: 0;
+}
+
+.register-nav a {
+  color: #ffffff !important;
+}
+
+.register-nav a:hover {
+  text-shadow: 0 0 5px #FF4500;
 }
 

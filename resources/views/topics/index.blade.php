@@ -2,7 +2,8 @@
 @section('title','话题列表')
 
 @section('content')
-    <div class="row mb-5">
+
+    <div class=" row mb-5">
         {{--主体内容--}}
         <div class="col-md-9 col-lg-9 topic-list">
             {{--分类--}}

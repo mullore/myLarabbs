@@ -29,29 +29,33 @@ body{
     margin-bottom: 40px;
     margin-top: 0;
 }
+
 //导航头像
 .avatar{
     width: 40px;
     height: 40px;
     object-fit:cover;
 }
+
 //footer
 html{
     position: relative;
     min-height: 100%;
 }
 body{
+
     //margin-bottom: 60px;
 }
 .footer{
     position: absolute;
+    left: 0;
     bottom: 0;
-    width: 100%;
     min-height: 60px;
     background-color: #000;
 
 
 }
+
 .pad_bt0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -148,3 +152,34 @@ body{
     white-space: nowrap;
 }
 
+//登录login
+.bg-login
+{
+    background: url("public/uploads/images/background/Goodgirl.jpg")  no-repeat   ;
+    background-position: 52% 30%!important;
+    background-size: cover ;
+}
+
+.login-nav{
+    border-bottom:0;
+}
+.opacity-card{
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+}
+
+.bg-register{
+    background: url("public/uploads/images/background/summer.jpg")  no-repeat   ;
+    background-position: 15% 30%!important;
+    background-size: cover ;
+}
+.register-nav{
+
+    border: 0;
+    a{
+        color: #ffffff!important;
+    }
+    a:hover{
+        text-shadow: 0 0 5px #FF4500;
+    }
+}

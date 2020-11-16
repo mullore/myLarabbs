@@ -5,11 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
         <title>Re0起始页</title>
-        <link rel="shortcut icon" href="{{asset('uploads/images/gx_favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset('uploads/images/favicon.ico')}}">
         <link href="{{ mix('css/app.css') }}" rel="stylesheet" >
-
     </head>
 
     <body class="home">
@@ -96,15 +94,14 @@
             </div>
         </div>
         {{--页脚--}}
-        <div class="w-100 text-white  text-center home-footer position-fixed">
+        <div class="home-footer  w-100 text-white  text-center text-secondary ">
             <p class="mb-1">本站素材均从网上下载,若有冒犯请联系站长</p>
-            <P class="mb-0"> ©2020 mullore.com <small>粤ICP备19127785号-1</small></P>
+            <P class="mb-0"> ©2020 Joker <small>粤ICP备19127785号-1</small></P>
         </div>
-        {{--软键盘--}}
-        <div style="width: 100%; height: 300px">123</div>
     </body>
     {{----}}
     <script src="{{mix('js/app.js')}}"></script>
-{{--    <script src="{{ asset('js/home.js') }}" type="text/javascript"></script>--}}
+    <script src="{{ asset('js/myTime.js') }}"></script>
+
 
 </html>

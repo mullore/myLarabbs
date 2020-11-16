@@ -10,11 +10,10 @@ function  checkTime(i) {
 function nowTime() {
     var d = new Date();
     // var t = d.toLocaleString('chinese', { hour12: false });
-    var h = checkTime(d.getHours());
-    var m = checkTime(d.getMinutes());
-    var s = checkTime(d.getSeconds());
-    var time  = h + ':' + m + ':' + s;
-    document.getElementById('myTime').innerHTML = time ;
+    let  h = checkTime(d.getHours());
+    let m = checkTime(d.getMinutes());
+    let s = checkTime(d.getSeconds());
+    document.getElementById('myTime').innerHTML = h + ':' + m + ':' + s ;
 }
 let  myTime = setInterval(function () {
     nowTime()
