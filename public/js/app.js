@@ -37266,6 +37266,9 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // require('./myTime');
 
+
+__webpack_require__(/*! ./soft_borard_layout */ "./resources/js/soft_borard_layout.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37323,6 +37326,26 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/soft_borard_layout.js":
+/*!********************************************!*\
+  !*** ./resources/js/soft_borard_layout.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var inputs = document.querySelectorAll("input[type='text']");
+var h = window.innerHeight;
+
+for (var i = 0; i < inputs.length; i++) {
+  (function (i) {
+    inputs[i].addEventListener('focus', function () {
+      document.body.style.height = h + 'px';
+    }, false);
+  })(i);
+}
 
 /***/ }),
 

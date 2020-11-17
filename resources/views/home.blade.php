@@ -15,6 +15,7 @@
         {{--导航--}}
         <nav class="hone-nav  fixed-top  pt-3 container">
             <ul class="nav text-white ">
+
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('topics.index')}}">论坛</a>
                 </li>
@@ -41,7 +42,7 @@
                             <div class="form-group input-group">
                                 <input  name="q" type="text"
                                        class="form-control rounded-pill text-center"
-                                       placeholder="Search"  autocomplete="off" >
+                                       placeholder="Search"  autocomplete="off"  >
                                 <button class="btn btn-outline  position-absolute search-button rounded-pill ">
                                     <i class="fa fa-search pr-2 "></i>
                                 </button>
@@ -54,7 +55,7 @@
                             <input name=tn type=hidden value=baidu>
                             <div class="form-group input-group">
                                 <input  type="text" name="word" size="30" class="form-control rounded-pill text-center"
-                                       placeholder="Search"  autocomplete="off"  >
+                                       placeholder="Search"  autocomplete="off" id="joker" >
                                 <button  class="btn btn-outline  position-absolute search-button  rounded-pill ">
                                     <i class="fa fa-search pr-2 "></i>
                                 </button>

@@ -110,3 +110,17 @@
 .h-100vh{
     height: 100vh;
 }
+
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle,#fff 30%,transparent 0) 0 0,
+    //radial-gradient(circle,#fff 30%,transparent 0) 15px 15px,
+    radial-gradient(transparent 0, transparent 4px, #e24141 4px)
+
+    #00caf5;
+    background-size: 30px 30px;
+}
+
+

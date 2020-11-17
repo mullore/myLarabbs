@@ -17114,6 +17114,14 @@ readers do not read off random characters that represent icons */
   height: 100vh;
 }
 
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 30%, transparent 0) 0 0, radial-gradient(transparent 0, transparent 4px, #e24141 4px) #00caf5;
+  background-size: 30px 30px;
+}
+
 body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;

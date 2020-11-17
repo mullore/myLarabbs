@@ -1,13 +1,14 @@
 @extends('layouts.app',[
+    'nav_style'=>'register-nav bg-transparent mb-4',
     'footer_style'=>'bg-transparent',
-    'header_style'=>'register-nav bg-transparent '
+
 ])
 
 @section('bg','bg-register')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+
+    <div class="row justify-content-center align-items-center">
         <div class="col-md-6">
             <div class="card opacity-card">
                 <div class="card-header">{{ __('Register') }}</div>
@@ -109,5 +110,5 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection
