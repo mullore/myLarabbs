@@ -15,4 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .copyDirectory('resources/editor/css','public/css')
     .copyDirectory('resources/editor/js','public/js')
-    .js('resources/js/myTime.js','public/js/myTime.js').version();
+    .js('resources/js/myTime.js','public/js/myTime.js')
+    // .js('resources/js/resizeHeight.js','public/js/resizeHeight.js')
+    .version();
+

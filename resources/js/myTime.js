@@ -1,5 +1,6 @@
 
 
+
 function  checkTime(i) {
     if (i<10){
         i  = '0' + i;
@@ -15,8 +16,10 @@ function nowTime() {
     let s = checkTime(d.getSeconds());
     document.getElementById('myTime').innerHTML = h + ':' + m + ':' + s ;
 }
-let  myTime = setInterval(function () {
+ setInterval(function () {
     nowTime()
 },1000)
 
-export default  myTime;
+// export default  myTime;
+
+

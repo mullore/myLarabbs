@@ -17003,7 +17003,7 @@ readers do not read off random characters that represent icons */
 
 .home {
   position: relative;
-  background: url(/images/wallhaven-695843.jpg?023301cf044dedad67afd0678da6ac5d) no-repeat;
+  background: url("http://oss.mullore.com/wallhaven-695843.jpg") no-repeat;
   background-position: 52% 30% !important;
   background-size: cover;
   margin-bottom: 0 !important;
@@ -17150,11 +17150,15 @@ html {
 }
 
 .footer {
+  position: relative;
+  min-height: 60px;
+  background-color: #000;
+}
+
+.footer-ab_b0 {
   position: absolute;
   left: 0;
   bottom: 0;
-  min-height: 60px;
-  background-color: #000;
 }
 
 .pad_bt0 {
@@ -17677,8 +17681,12 @@ html {
   white-space: nowrap;
 }
 
+.h-60vh {
+  height: 60vh;
+}
+
 .bg-login {
-  background: url(/images/Goodgirl.jpg?7d4a7251ae9e919c36e4c50718ea9318) no-repeat;
+  background: url("http://oss.mullore.com/Goodgirl.jpg") no-repeat;
   background-position: 52% 30% !important;
   background-size: cover;
 }
@@ -17694,7 +17702,7 @@ html {
 }
 
 .bg-register {
-  background: url(/images/summer.jpg?1c14d5734016d8bfea115531f94b0227) no-repeat;
+  background: url("http://oss.mullore.com/summer.jpg") no-repeat;
   background-position: 15% 30% !important;
   background-size: cover;
 }

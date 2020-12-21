@@ -6,10 +6,12 @@
                 {{--头像--}}
                 <div class="media-left">
                     <a href="{{ route('users.show',[$topic->user_id]) }}">
-                        <img class="media-object img-thumbnail img-fluid mr-2 object-fit_cover"
+                        <img class="media-object img-thumbnail img-fluid mr-2 object-fit_cover "
                               width="52px"
                              style=" height: 52px"
-                            src="{{ $topic->user->avatar }}" alt="{{$topic->user->name}}">
+                             height="52px"
+                             data-src="{{ $topic->user->avatar }}"
+                            >
                     </a>
                 </div>
                 {{--内容--}}

@@ -1,4 +1,7 @@
-require('./bootstrap');
-// require('./myTime');
+// import resize from "./resizeHeight";
 
-require('./soft_borard_layout')
+require('./bootstrap');
+// window.resizeHeight =require('./resizeHeight')
+ // resize();
+
+require('./lazyLoad')

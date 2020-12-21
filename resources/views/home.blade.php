@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}" >
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
         <link href="{{ mix('css/app.css') }}" rel="stylesheet" >
     </head>
 
-    <body class="home">
+    <body class="home" >
 
         {{--导航--}}
         <nav class="hone-nav  fixed-top  pt-3 container">
@@ -38,7 +38,7 @@
                 <div class="tab-content">
                     {{--谷歌--}}
                     <div class="tab-pane  fade " id="goggle">
-                        <form action="http://www.google.com/search" target="_blank" method="get">
+                        <form action="https://www.google.com/search" target="_blank" method="get">
                             <div class="form-group input-group">
                                 <input  name="q" type="text"
                                        class="form-control rounded-pill text-center"
@@ -102,7 +102,8 @@
     </body>
     {{----}}
     <script src="{{mix('js/app.js')}}"></script>
-    <script src="{{ asset('js/myTime.js') }}"></script>
+    <script src="{{ mix('js/myTime.js') }}"></script>
+{{--    <script src="{{ mix('js/resizeHeight.js')}}"></script>--}}
 
 
 </html>

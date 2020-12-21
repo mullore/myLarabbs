@@ -2,13 +2,13 @@
 @extends('layouts.app',
 [
     'nav_style'=>'bg-transparent login-nav ',
-    'footer_style'=>'bg-transparent',
+    'footer_style'=>'bg-transparent footer-ab_b0',
 
 ])
 @section('bg','bg-login')
 @section('content')
 
-    <div class="row justify-content-center align-items-center">
+    <div class="row justify-content-center pt-5 h-60vh">
         <div class="col-md-6">
             <div class="card opacity-card ">
                 <div class="card-header">{{ __('Login') }}</div>

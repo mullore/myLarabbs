@@ -47,15 +47,20 @@ body{
     //margin-bottom: 60px;
 }
 .footer{
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    //position: absolute;
+    //left: 0;
+    //bottom: 0;
+    position: relative;
     min-height: 60px;
     background-color: #000;
 
 
 }
-
+.footer-ab_b0{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 .pad_bt0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -153,9 +158,14 @@ body{
 }
 
 //登录login
+.h-60vh
+{
+    height: 60vh;
+}
+
 .bg-login
 {
-    background: url("public/uploads/images/background/Goodgirl.jpg")  no-repeat   ;
+    background: url("http://oss.mullore.com/Goodgirl.jpg")  no-repeat   ;
     background-position: 52% 30%!important;
     background-size: cover ;
 }
@@ -169,7 +179,7 @@ body{
 }
 
 .bg-register{
-    background: url("public/uploads/images/background/summer.jpg")  no-repeat   ;
+    background: url("http://oss.mullore.com/summer.jpg")  no-repeat   ;
     background-position: 15% 30%!important;
     background-size: cover ;
 }

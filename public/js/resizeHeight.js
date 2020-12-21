@@ -81,49 +81,37 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/myTime.js":
-/*!********************************!*\
-  !*** ./resources/js/myTime.js ***!
-  \********************************/
+/***/ "./resources/js/resizeHeight.js":
+/*!**************************************!*\
+  !*** ./resources/js/resizeHeight.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function checkTime(i) {
-  if (i < 10) {
-    i = '0' + i;
-  }
-
-  return i;
-}
-
-function nowTime() {
-  var d = new Date(); // var t = d.toLocaleString('chinese', { hour12: false });
-
-  var h = checkTime(d.getHours());
-  var m = checkTime(d.getMinutes());
-  var s = checkTime(d.getSeconds());
-  document.getElementById('myTime').innerHTML = h + ':' + m + ':' + s;
-}
-
-setInterval(function () {
-  nowTime();
-}, 1000); // export default  myTime;
+function resize() {
+  var h = window.innerHeight;
+  document.body.style.height = h + 'px';
+  alert(233333);
+} // let Height = window.innerHeight;
+// window.onresize = function(){
+//     document.body.style.height = Height + 'px';
+// };
 
 /***/ }),
 
-/***/ 1:
-/*!**************************************!*\
-  !*** multi ./resources/js/myTime.js ***!
-  \**************************************/
+/***/ 2:
+/*!********************************************!*\
+  !*** multi ./resources/js/resizeHeight.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Homestead\code\Re0\resources\js\myTime.js */"./resources/js/myTime.js");
+module.exports = __webpack_require__(/*! D:\Homestead\code\Re0\resources\js\resizeHeight.js */"./resources/js/resizeHeight.js");
 
 
 /***/ })

@@ -1,4 +1,5 @@
-<footer class="footer w-100  text-white text-center text-secondary {{ $footer_style ?? ''}}" >
+<footer id="footer" class="footer w-100  text-white text-center text-secondary {{ $footer_style ?? ''}} pt-1"
+    >
     <div class="container mt-4 clearfix">
         <p class="float-left  d-none d-md-block mb-1 ">
             由 <a class="font-weight-bold" href="#">Joker</a> 设计和编码 <span style="color: #FF4500;font-size: 14px;">❤</span>

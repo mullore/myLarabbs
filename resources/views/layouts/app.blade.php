@@ -14,11 +14,11 @@
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         @yield('styles')
     </head>
-    <body class="@yield('bg' )">
+    <body class="@yield('bg' )" >
 
         <div id="app"  >
             @include('layouts.__header')
-            <div class="container ">
+            <div class="container  ">
                 @include('shared.__message')
                 @yield('content')
             </div>
@@ -26,6 +26,7 @@
         </div>
     </body>
     <script src="{{mix('js/app.js')}}"></script>
+
     {{--script--}}
     @yield('scripts')
 
