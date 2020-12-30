@@ -85,7 +85,7 @@
                                 <input id="captcha" class="form-control {{  $errors->has('captcha') ? 'is-invalid':'' }}"
                                        type="text" name="captcha" placeholder="请输入验证码" required>
                                 {{--验证码图--}}
-                                <img src="{{ captcha_src('flat') }}" class="captcha img-thumbnail mt-3 mb-2"
+                                <img data-src="{{ captcha_src('flat') }}" class="captcha img-thumbnail mt-3 mb-2"
                                      onclick="this.src='/captcha/flat?'+Math.random()" title="点击图片重新获取验证码">
                                 {{--验证报错信息--}}
                                 @if ($errors->has('captcha'))

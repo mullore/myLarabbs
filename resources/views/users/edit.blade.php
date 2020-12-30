@@ -43,13 +43,13 @@
                             <div class="d-inline-flex">
                                 <div class="col-md-4">
                                     <div class="card-title">更新后预览：</div>
-                                    <img id="preview_img"  class="img-thumbnail" src="{{ $user->avatar }}"
+                                    <img id="preview_img"  class="img-thumbnail" data-src="{{ $user->avatar }}"
                                          class="img-thumbnail" width="200" height="200">
                                 </div>
                                 @if ($user->avatar)
                                     <div class="col-md-4">
                                         <div class="card-title">更新前预览：</div>
-                                        <img src="{{ $user->avatar }}" class="img-thumbnail" width="200">
+                                        <img data-src="{{ $user->avatar }}" class="img-thumbnail" width="200">
                                     </div>
                                 @endif
                             </div>

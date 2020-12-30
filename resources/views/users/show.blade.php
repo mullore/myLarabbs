@@ -7,9 +7,9 @@
         <div class="col-lg-3 col-md-3 d-none d-lg-block user-info">
             <div class="card">
                 @if ($user->avatar)
-                    <img class="card-img-top" src="{{$user->avatar}}"  >
+                    <img class="card-img-top" src="" data-src="{{$user->avatar}}"  >
                 @else
-                    <img class="card-img-top" src="/uploads/images/avatars/default.jpeg">
+                    <img class="card-img-top" src="" data-src="/uploads/images/avatars/default.jpeg">
                 @endif
                 <div class="card-body">
                     <h5><strong>个人简介</strong></h5>

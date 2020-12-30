@@ -17,3 +17,5 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 Route::get('/captcha',function (){return 233333;});
+
+

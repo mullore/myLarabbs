@@ -7,9 +7,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 
-class User extends Authenticatable implements MustVerifyEmailContract
+// class User extends Authenticatable implements MustVerifyEmailContract
+class User extends Authenticatable
 {
-    use MustVerifyEmailTrait;
+    // use MustVerifyEmailTrait;
 
     use  Notifiable{
         notify as protected laravelNotify;
@@ -76,6 +77,22 @@ class User extends Authenticatable implements MustVerifyEmailContract
     public function isAuthorOf($model){
        return $this->id == $model->user_id;
     }
+    //我的粉丝 我可以被多人关注
+    public function followers(){
+        return $this->belongsToMany(User::class,'followers','user_id','follower_id');
+    }
+    //我的关注 我可以关注多人
+    public function followings(){
+        return $this->belongsToMany(User::class,'followers','follower_id','user_id');
+    }
 
+    //收藏
+    public function favoriteTopics(){
+        //默认情况下，这个中间表不包含时间戳。并且 Laravel 不会尝试自动填充 created_at/updated_at
+        //但是如果你想自动保存时间戳，您需要在迁移文件中添加 created_at/updated_at，
+        //然后在模型的关联/中加上 ->withTimestamps();
+        return $this->belongsToMany(Topic::class,'user_favorite_topics')
+            ->withTimestamps()->orderBy('user_favorite_topics.created_at','desc');
+    }
 
 }

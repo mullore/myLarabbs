@@ -5,8 +5,8 @@
 
 @section('content')
     <div class="container">
-        <div class="col-md-10 col-lg-10 offset-md-1">
-            <div class="card">
+        <div class="col-md-10 col-lg-10 offset-md-1 ">
+            <div class="card vh-100">
                 <div class="card-body">
                     <h3 class="text-sm-center">
                         <i class="far fa-bell"></i>我的通知

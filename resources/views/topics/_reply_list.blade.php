@@ -9,7 +9,8 @@
                     {{--头像--}}
                     <div class="media-left mt-1">
                         <img class="media-object mr-3 img-thumbnail object-fit_cover "
-                             src="{{$reply->user->avatar}}"
+                             src=""
+                             data-src="{{$reply->user->avatar}}"
                              width="48px"  style="height: 48px; "
                              alt="{{ $reply->user->name }}">
                     </div>

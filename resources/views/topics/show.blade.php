@@ -19,7 +19,7 @@
                 {{--头像--}}
                 <div class="media">
                     <a href="{{route('users.show',$topic->user->id)}}">
-                        <img class="img-thumbnail img-fluid object-fit_cover" src="{{$topic->user->avatar}}"
+                        <img class="img-thumbnail img-fluid object-fit_cover" src="" data-src="{{$topic->user->avatar}}"
                          width="300px">
                     </a>
                 </div>
@@ -29,10 +29,12 @@
                 </div>
                 <hr>
                 <div class="btn-group btn-group-sm btn-block">
-                    <a class="btn btn-outline-secondary "><i class="fa fa-envelope mr-1 "></i>关注 </a>
+                    @include('topics._follower',['followed' => $followed])
+{{--                    <div class="btn btn-outline-secondary "><i class="fa fa-envelope mr-1 "></i>关注 </div>--}}
                 </div>
                 <div class="btn-group btn-group-sm btn-block">
-                    <a class="btn btn-outline-secondary "><i class="fa fa-paper-plane mr-1"></i>收藏 </a>
+                    @include('topics._favorite',['favored'=>$favored])
+{{--                    <div class="btn btn-outline-secondary "><i class="fa fa-paper-plane mr-1"></i>收藏 </div>--}}
                 </div>
             </div>
         </div>
@@ -89,8 +91,41 @@
                 </button>
             </form>
         </div>
-    </div>
     @endcan
+    </div>
 </div>
 
+@endsection
+@section('scripts')
+<script>
+    $(document).ready(function () {
+
+        $('.btn-favorite').click(function () {
+            axios.post('{{ route('topics.favorite',['topic'=>$topic->id]) }}')
+                .then(function () {
+                    location.reload();
+                })
+        });
+        $('.btn-disFavorite').click(function () {
+            axios.delete('{{ route('topics.unFavorite',['topic'=>$topic->id]) }}')
+                .then(function () {
+                    location.reload();
+                })
+
+        });
+
+        $('.btn-follower').click(function () {
+            axios.post('{{route( 'topics.follow',['topic'=> $topic->user_id] )}}')
+                .then(function () {
+                    location.reload();
+                })
+        });
+        $('.btn-disFollower').click(function () {
+            axios.delete('{{ route('topics.unFollow',['topic' =>$topic->user_id] )}}')
+                .then(function () {
+                    location.reload();
+                })
+        });
+    });
+</script>
 @endsection

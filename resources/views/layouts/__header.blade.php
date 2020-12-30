@@ -57,7 +57,7 @@
                     <li class="d-none d-lg-block nav-item dropdown ">
                         <a  class="nav-link dropdown-toggle pad_bt0"  href="#" data-toggle="dropdown">
                             <img class="img-thumbnail img-fluid rounded-circle  avatar "
-                                src="{{ Auth::user()->avatar   }}"
+                                src="" data-src="{{ Auth::user()->avatar   }}"
                                  width="35px" height="35px"  alt="个人头像">
 
                             {{ Auth::user()->name }}
