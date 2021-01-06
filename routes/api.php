@@ -19,3 +19,18 @@ use Illuminate\Http\Request;
 Route::get('/captcha',function (){return 233333;});
 
 
+Route::prefix('v1')->name('api.v1')->namespace('Api')->group(function (){
+    // Route::middleware(['auth'])->group(function (){
+    //
+    // });
+
+    Route::middleware('throttle:60,1')->group(function (){
+        Route::resource('categories','CategoriesController');
+        Route::resource('topics','TopicsController');
+        Route::resource('users','UsersController');
+        Route::resource('topics','TopicsController');
+        Route::resource('replies','RepliesController');
+    });
+});
+
+

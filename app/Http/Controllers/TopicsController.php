@@ -49,6 +49,10 @@ class TopicsController extends Controller
 		// $topic = Topic::create($request->all());
         $topic->fill($request->all());
         $topic->user_id = \Auth::id();
+        if (!$request->input('category_id')){
+           $topic->category_id = 1;
+        }
+
         $topic->save();
 		return redirect()->to($topic->link())->with('success', '帖子创建成功！');
 	}

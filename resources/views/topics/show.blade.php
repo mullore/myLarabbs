@@ -68,7 +68,8 @@
         <div class="card  mt-4 ">
             <div class="card-body pb-0 ">
                 {{--发布评论--}}
-                @includeWhen(Auth::id(),'topics._reply_box',['topic' =>$topic])
+                @include('topics._reply_box',['topic' =>$topic])
+{{--                @includeWhen(Auth::id(),'topics._reply_box',['topic' =>$topic])--}}
                 {{--评论列表--}}
                 @include('topics._reply_list',['replies' => $topic->reply()->with('user','topic')->recent()->paginate(5)])
             </div>

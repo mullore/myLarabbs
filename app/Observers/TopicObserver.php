@@ -24,7 +24,7 @@ class TopicObserver
         $topic->excerpt = make_excerpt($topic->body);
 
         if(!$topic->slug){
-            $topic->slug = app(SlugsTranslateHandler::class)->translate($topic->title);
+            $topic->slug = app(SlugsTranslateHandler::class)->translate($topic->title) ?: '';
         }
     }
     public function deleted(Topic $topic){

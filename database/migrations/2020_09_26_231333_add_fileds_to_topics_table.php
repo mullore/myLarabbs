@@ -16,9 +16,9 @@ class AddFiledsToTopicsTable extends Migration
         Schema::table('topics', function (Blueprint $table) {
             //
             $table->text('body');
-            $table->bigInteger('user_id')->unsigned()->index();
+            $table->unsignedBigInteger('user_id')->unsigned()->index();
             $table->integer('category_id')->unsigned()->index();
-            $table->integer('reply_count')->unsigned()->default(0);
+            $table->unsignedBigInteger('reply_count')->unsigned()->default(0);
             $table->integer('view_count')->unsigned()->default(0);
             $table->integer('last_reply_user_id')->unsigned()->default(0);
             $table->integer('order')->unsigned()->default(0);;

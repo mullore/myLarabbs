@@ -15,11 +15,11 @@ class CreateUserFavoriteTopicsTable extends Migration
     {
         Schema::dropIfExists('user_favorite_topics');
         Schema::create('user_favorite_topics', function (Blueprint $table) {
-            $table->Increments('id');
-            $table->unsignedInteger('user_id');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade');
-            $table->unsignedInteger('topic_id');
+            $table->unsignedBigInteger('topic_id');
             $table->foreign('topic_id')->references('id')->on('topics')
                 ->onDelete('cascade');
             $table->timestamps();

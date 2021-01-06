@@ -13,28 +13,29 @@ class SlugsTranslateHandler
         $http = new Client();
 
         //通用翻译API
+        // $api = 'http://api.fanyi.baidu.com/api/trans/vip/translate?';
         $api = 'http://api.fanyi.baidu.com/api/trans/vip/translate?';
         //app_id
-        $app_id = config('services.baidu_translate.app_id');
+        $appid = config('services.baidu_translate.appid');
         //key
         $key =  config('services.baidu_translate.key');
         //time
         $salt = time();
 
-        if(empty($app_id) || empty($key)){
+        if(empty($appid) || empty($key)){
             $this->pinyin($text);
         }
 
         // 根据文档，生成 sign
         // http://api.fanyi.baidu.com/api/trans/product/apidoc
         // app_id+q+salt+密钥 的MD5值
-        $sign = md5($app_id.$text.$salt.$key);
+        $sign = md5($appid.$text.$salt.$key);
 
         $query = http_build_query([
             'q' => $text,
             'from' => 'zh',
             'to'=>'en',
-            'appid' => $app_id,
+            'appid' => $appid,
             'salt'=> $salt,
             'sign' =>$sign,
         ]);

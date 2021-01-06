@@ -16,26 +16,38 @@
             {{--left--}}
             <ul class="navbar-nav mr-auto">
                 {{--话题--}}
-                <li class="nav-item text-center
+                <li class="nav-item  pull-left
                     {{ active_class(if_route('topics.index')) }}
                     {{ active_class(if_route('home')) }}">
-                    <a class="nav-link" href="{{ route('topics.index') }}">话题</a>
+
+                    <a class="nav-link" href="{{ route('topics.index') }}">
+                        <i  class="fa fa-cogs"></i>
+                        <span class="ml-1">话题</span>
+                    </a>
                 </li>
                 {{--分享--}}
-                <li class="nav-item  {{ category_nav_active(1) }} text-center ">
-                    <a class="nav-link" href="{{ route('categories.show',1) }}">分享</a>
+                <li class="nav-item pull-left {{ category_nav_active(1) }}  ">
+                    <a class="nav-link" href="{{ route('categories.show',1) }}">
+                        <i  class="fa fa-cogs"></i>
+                        <span class="ml-1">分享</span></a>
                 </li>
                 {{--教程--}}
-                <li class="nav-item  {{ category_nav_active(2) }} text-center">
-                    <a class="nav-link" href="{{ route('categories.show',2) }}">教程</a>
+                <li class="nav-item pull-left {{ category_nav_active(2) }} ">
+                    <a class="nav-link" href="{{ route('categories.show',2) }}">
+                        <i  class="fa fa-cogs"></i>
+                        <span class="ml-1">教程</span></a>
                 </li>
                 {{--问答--}}
-                <li class="nav-item  {{ category_nav_active(3) }} text-center">
-                    <a class="nav-link" href="{{ route('categories.show',3) }}">问答</a>
+                <li class="nav-item pull-left {{ category_nav_active(3) }} ">
+                    <a class="nav-link" href="{{ route('categories.show',3) }}">
+                        <i  class="fa fa-cogs"></i>
+                        <span class="ml-1">问答</span></a>
                 </li>
                 {{--公告--}}
-                <li class="nav-item  {{ category_nav_active(4) }} text-center">
-                    <a class="nav-link" href="{{ route('categories.show',4) }}">公告</a>
+                <li class="nav-item pull-left {{ category_nav_active(4) }} ">
+                    <a class="nav-link" href="{{ route('categories.show',4) }}">
+                        <i  class="fa fa-cogs"></i>
+                        <span class="ml-1">公告</span></a>
                 </li>
             </ul>
             {{--Right--}}
@@ -70,28 +82,38 @@
                                 <form action="{{ route('logout') }}" method="post"
                                       onsubmit="return confirm('确定要退出吗')" >
                                     {{ csrf_field() }}
-                                    <button class="btn btn-block btn-danger" type="submit">退出</button>
+                                    <button class="btn btn-block btn-sm btn-danger " type="submit">退出</button>
                                 </form>
                             </a>
 
                         </div>
                     </li>
                     {{--移动--}}
-                    <li class="d-lg-none nav-item lg text-center"><a class="nav-link">个人中心</a> </li>
-                    <li class="d-lg-none nav-item text-center"><a class="nav-link">编辑资料</a> </li>
-                    <li class="d-lg-none nav-item text-center">
-                        <a class="dropdown-item" href="#">
+                    <li class="d-lg-none nav-item lg pull-left">
+                        <a class="nav-link">
+                            <i class="fa fa-address-book" aria-hidden="true"></i>
+                            个人中心</a> </li>
+                    <li class="d-lg-none nav-item pull-left">
+                        <a class="nav-link">
+                            <i class="fa fa-address-book" aria-hidden="true"></i>
+                            编辑资料</a> </li>
+                    <li class="d-lg-none nav-item ">
+                        <a class="dropdown-item p-0" href="#">
                             <form action="{{ route('logout') }}" method="post" >
                                 {{ csrf_field() }}
-                                <button class="btn btn-sm btn-danger" type="submit">退出</button>
+                                <button class="btn btn-sm btn-danger w-100 " type="submit">退出</button>
                             </form>
                         </a>
                     </li>
 
                 {{--登录前--}}
                 @else
-                    <li class="nav-item text-center"><a class="nav-link" href="{{ route('login') }}">登录</a> </li>
-                    <li class="nav-item text-center"><a class="nav-link" href="{{ route('register') }}">注册</a> </li>
+                    <li class="nav-item pull-left"><a class="nav-link" href="{{ route('login') }}">
+                            <i class="fa fa-address-book" aria-hidden="true"></i>
+                            <span class="ml-2">登录</span></a></a> </li>
+                    <li class="nav-item pull-left"><a class="nav-link" href="{{ route('register') }}">
+                            <i class="fa fa-address-book" aria-hidden="true"></i>
+                            <span class="ml-2">注册</span></a></a> </li></a> </li>
                 @endauth
 
             </ul>
