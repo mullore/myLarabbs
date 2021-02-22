@@ -182,7 +182,12 @@ return [
         App\Providers\RouteServiceProvider::class,
         //ide-helper
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        // Illuminate\Translation\TranslationServiceProvider::class,
         Overtrue\LaravelLang\TranslationServiceProvider::class,
+
+        //短信服务
+        \App\Providers\EasySmsServiceProvider::class,
+        // Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -234,6 +239,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        // 'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

@@ -11,14 +11,21 @@
         "php": "^7.2",
         "encore/laravel-admin": "1.7.15",
         "fideloper/proxy": "^4.0",
+        "gregwar/captcha": "^1.1",
         "guzzlehttp/guzzle": "~6.3",
         "intervention/image": "^2.5",
         "laravel/framework": "^6.0",
+        "laravel/socialite": "^5.2",
         "laravel/tinker": "^1.0",
         "mews/captcha": "~3.0",
         "mews/purifier": "~3.0",
+        "overtrue/easy-sms": "^1.2",
+        "overtrue/laravel-lang": "~3.0",
+        "overtrue/laravel-wechat": "~5.0",
         "overtrue/pinyin": "~4.0",
-        "summerblue/laravel-active": "6.*"
+        "socialiteproviders/weixin": "^4.1",
+        "summerblue/laravel-active": "6.*",
+        "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "~3.2",
@@ -34,7 +41,8 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "secure-http": false
     },
     "extra": {
         "laravel": {
@@ -76,5 +84,11 @@
             "php artisan ide-helper:generate",
             "php artisan optimize"
         ]
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.org"
+        }
     }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Requests\Api;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ReplyRequest extends FormRequest
+class VerificationCodeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +25,15 @@ class ReplyRequest extends FormRequest
     {
         return [
             //
-            'content'=>'required|min:2'
+            'captcha_key'=>'required|string',
+            'captcha_code'=>'required|string'
+        ];
+    }
+    public function attributes()
+    {
+        return [
+            'captcha_key' => '图片验证码 key',
+            'captcha_code' => '图片验证码',
         ];
     }
 }

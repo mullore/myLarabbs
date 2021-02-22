@@ -4,7 +4,7 @@ namespace App\Http\Requests\Api;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ReplyRequest extends FormRequest
+class AuthorizationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +25,9 @@ class ReplyRequest extends FormRequest
     {
         return [
             //
-            'content'=>'required|min:2'
+            'username'=>'required|string',
+            //该字段可以包含字母和数字，以及破折号和下划线
+            'password'=>'required|alpha_dash|min:6',
         ];
     }
 }

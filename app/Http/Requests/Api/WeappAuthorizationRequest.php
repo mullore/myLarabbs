@@ -4,7 +4,7 @@ namespace App\Http\Requests\Api;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ReplyRequest extends FormRequest
+class WeappAuthorizationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +25,7 @@ class ReplyRequest extends FormRequest
     {
         return [
             //
-            'content'=>'required|min:2'
+            'code' => 'required|string',
         ];
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\UserRequest;
 use App\Http\Resources\UserResource;
+use App\Models\Image;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -21,9 +22,26 @@ class UsersController extends Controller
     //更新
     public function  update(UserRequest $request){
 
+        // $user = $request->user();
+        // $user->update($request->all());
+        // return response(null,204);
         $user = $request->user();
-        $user->update($request->all());
-        return response(null,204);
+
+        $attributes = $request->only(['name', 'email', 'introduction']);
+
+        if ($request->avatar_image_id) {
+            $image = Image::query()->find($request->avatar_image_id);
+
+            $attributes['avatar'] = $image->path;
+        }
+
+        $user->update($attributes);
+
+        return new UserResource($user);
+    }
+    /*创建用户*/
+    public function store(){
+
     }
 
 }

@@ -15,7 +15,7 @@ class Topic extends Model
         return $this->belongsTo(Category::class);
     }
     public function reply(){
-        return $this->hasOne(Reply::class);
+        return $this->hasMany(Reply::class);
     }
 
 
